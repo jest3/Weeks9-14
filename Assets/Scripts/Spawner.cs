@@ -1,10 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Spawner : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject spiritPrefab;
+    //sets how often the spirits spawn
+    public float spawnInterval = 2f;
+
+    //assigning a listener for clicked spirit event
+    public UnityEvent onSpiritClicked;
+
+    public SpriteRenderer spriteRenderer;
+
     void Start()
     {
         
