@@ -13,10 +13,10 @@ public class Spawner : MonoBehaviour
     //sets how often the spirits spawn
     public float spawnInterval = 8f;
 
-    public float minPosX = -10f;
-    public float maxPosX = 10f;
-    public float minPosY = 4f;
-    public float maxPosY = -1f;
+    public float minPosX = -12;
+    public float maxPosX = 12;
+    public float minPosY = -1;
+    public float maxPosY = 5;
 
     void Start()
     {

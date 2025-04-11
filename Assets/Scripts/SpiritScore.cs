@@ -21,4 +21,10 @@ public class SpiritScore : MonoBehaviour
             scoreNumber++;
             score.text = scoreNumber.ToString();
     }
+
+    public void goldenSpiritScore()
+    {
+        scoreNumber = scoreNumber + 5;
+        score.text = scoreNumber.ToString();
+    }
 }
