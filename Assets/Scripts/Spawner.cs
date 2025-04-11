@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject spiritPrefab;
+    public SpiritScore scoreManager;
     
     //spawns the spirits at random positions
     public Transform[] spawnPoints;
@@ -33,10 +34,18 @@ public class Spawner : MonoBehaviour
             //instantiates spirit
             GameObject newSpirit = Instantiate(spiritPrefab, randomPosition, Quaternion.identity);
 
+            Spirit spiritScript = newSpirit.GetComponent<Spirit>();
+
+            if (spiritScript != null && scoreManager != null)
+            {
+                spiritScript.onSpiritClicked.AddListener(scoreManager.addToScore);
+            }
+            
             yield return new WaitForSeconds(spawnInterval);
 
             Destroy(newSpirit, 10f);
         }
+
 
     }
 }

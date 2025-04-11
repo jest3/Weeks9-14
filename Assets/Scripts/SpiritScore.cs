@@ -6,19 +6,19 @@ using TMPro;
 
 public class SpiritScore : MonoBehaviour
 {
-    public int score = 0;
-    public TextMeshProUGUI scoreText;
+    public int scoreNumber = 0;
+    public TextMeshProUGUI score;
 
     // Start is called before the first frame update
     void Start()
     {
-        score++;
-        scoreText.text = "Spirits Caught: " + score.ToString();
+        score.text = scoreNumber.ToString();
     }
 
     // Update is called once per frame
-    void Update()
+    public void addToScore()
     {
-        
+            scoreNumber++;
+            score.text = scoreNumber.ToString();
     }
 }

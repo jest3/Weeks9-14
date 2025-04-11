@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 813031167784576089}
   - component: {fileID: -5202118299827845846}
   - component: {fileID: -9184624082419255869}
+  - component: {fileID: 4395087360879543464}
   m_Layer: 0
   m_Name: Spirit
   m_TagString: Untagged
@@ -100,13 +101,60 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spiritCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.09274703
+      value: 0.36250186
+      inSlope: 2.810627
+      outSlope: 2.810627
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.36456168
+      value: 0.004856169
+      inSlope: -0.63095367
+      outSlope: -0.63095367
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6814385
+      value: 0.43961334
+      inSlope: -0.027829854
+      outSlope: -0.027829854
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9974679
+      value: -0.0012347698
+      inSlope: 0.7363908
+      outSlope: 0.7363908
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   t: 0
-  pos1: {fileID: 0}
-  pos2: {fileID: 0}
+  startPos: {x: 0, y: 0, z: 0}
+  speedX: 2
+  bobHeight: 1
+  bobSpeed: 1
 --- !u!114 &-9184624082419255869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,3 +168,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+--- !u!114 &4395087360879543464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2267946250343392366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c1f3731bef5ea1419042ff592a2b5d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onSpiritClicked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
