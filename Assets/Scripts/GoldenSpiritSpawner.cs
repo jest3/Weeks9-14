@@ -7,27 +7,32 @@ public class GoldenSpiritSpawner : MonoBehaviour
 {
     public GameObject goldenSpiritPrefab;
     public SpiritScore scoreManager;
+    public LanternSprite lanternSpriteManager;
 
     //spawns the spirits at random positions
     public Transform[] spawnPoints;
 
     //sets how often the spirits spawn
-    public float goldenSpawnInterval = 50f;
+    public float goldenSpawnInterval = 8f;
 
     public float minPosX = -12;
     public float maxPosX = 12;
     public float minPosY = -1;
-    public float maxPosY = 5;
+    public float maxPosY = 4;
 
     void Start()
     {
         StartCoroutine(SpawnGoldenSpirit());
+    }
 
         IEnumerator SpawnGoldenSpirit()
         {
             while (true)
             {
-                Vector2 randomPosition = new Vector2
+
+            yield return new WaitForSeconds(goldenSpawnInterval);
+
+            Vector2 randomPosition = new Vector2
                     (Random.Range(minPosX, maxPosX),
                      Random.Range(minPosY, maxPosY));
 
@@ -36,16 +41,16 @@ public class GoldenSpiritSpawner : MonoBehaviour
 
                 GoldenSpirit goldenSpiritScript = newGoldenSpirit.GetComponent<GoldenSpirit>();
 
-                if (goldenSpiritScript != null && scoreManager != null)
+                if (goldenSpiritScript != null && scoreManager != null && lanternSpriteManager != null)
                 {
                     goldenSpiritScript.onGoldenSpiritClicked.AddListener(scoreManager.goldenSpiritScore);
+                    goldenSpiritScript.onGoldenSpiritClicked.AddListener(lanternSpriteManager.ChangeLantern);
                 }
 
-                yield return new WaitForSeconds(goldenSpawnInterval);
+                //yield return new WaitForSeconds(goldenSpawnInterval);
 
                 Destroy(newGoldenSpirit, 10f);
             }
 
         }
     }
-}
