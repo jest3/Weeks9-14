@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8410456805163694295}
   - component: {fileID: 813031167784576089}
+  - component: {fileID: -5202118299827845846}
+  - component: {fileID: -9184624082419255869}
   m_Layer: 0
   m_Name: Spirit
   m_TagString: Untagged
@@ -84,3 +86,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-5202118299827845846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2267946250343392366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 278dfd035d97cb040a1c587723694618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spiritCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  t: 0
+  pos1: {fileID: 0}
+  pos2: {fileID: 0}
+--- !u!114 &-9184624082419255869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2267946250343392366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f991d39bc7279469a79352938dd2ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
