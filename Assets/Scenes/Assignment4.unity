@@ -235,8 +235,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lanternImage: {fileID: 1819952127}
-  regularLanternSprite: {fileID: 21300000, guid: 1ff34e3c841d91841af27a6ab167cc70, type: 3}
-  goldenLanternSprite: {fileID: 21300008, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
+  regularLanternSprite: {fileID: 21300000, guid: 006b2b3445155834a816c196d736c583, type: 3}
+  goldenLanternSprite: {fileID: 21300000, guid: be7fec7452b0578459ea26b374595ef0, type: 3}
 --- !u!1 &934228652
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +521,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spiritPrefab: {fileID: 2267946250343392366, guid: 6831402475cb2844193bd09e8213cc16, type: 3}
   scoreManager: {fileID: 934228653}
-  spawnPoints: []
   spawnInterval: 2
   minPosX: -8
   maxPosX: 8
@@ -580,7 +579,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Spirit''s Caught: '
+  m_text: 'Spirits Caught: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -676,6 +675,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1517509003
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1517509004}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1517509004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517509003}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.08, y: -0.47635683, z: 0.050788593}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1709422717
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,7 +738,6 @@ MonoBehaviour:
   goldenSpiritPrefab: {fileID: 6972933391566606893, guid: e6b2cb5de8014af42a5af14029fd0407, type: 3}
   scoreManager: {fileID: 934228653}
   lanternSpriteManager: {fileID: 389588664}
-  spawnPoints: []
   goldenSpawnInterval: 8
   minPosX: -12
   maxPosX: 12
@@ -794,15 +823,15 @@ RectTransform:
   m_GameObject: {fileID: 1819952126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.30523846, y: 0.31191483, z: 0.20287143}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 934228657}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 37.5}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: 6}
+  m_SizeDelta: {x: 500, y: 616}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &2019480416
 GameObject:
@@ -840,7 +869,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.008009963, g: 0.0112309735, b: 0.03773582, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -906,3 +935,4 @@ SceneRoots:
   - {fileID: 2124279}
   - {fileID: 389588663}
   - {fileID: 1709422719}
+  - {fileID: 1517509004}
